@@ -3,7 +3,7 @@
 request = require 'request'
 
 module.exports = (robot) ->
-  robot.respond /(TEST .*) (SO .*)/i, (msg) ->
+  robot.respond /(.*) (SO SPEAKETH THE YOHO.*)/i, (msg) ->
     memeGenerator msg, 970994, 4316452, msg.match[1], msg.match[2], (url) ->
       options =  
         uri: 'http://memer.herokuapp.com/images' 

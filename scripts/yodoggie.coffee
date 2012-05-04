@@ -5,12 +5,11 @@ request = require 'request'
 module.exports = (robot) ->
 
   robot.respond /(YO DOGGIE .*) (SO .*)/i, (msg) ->
-    memeGenerator msg, 79, 108785, msg.match[1], msg.match[2], (url) ->
-
+    
     options =  
       uri: 'http://memer.herokuapp.com/images' 
       json:
-        picture: url
+        picture: memeGenerator msg, 79, 108785, msg.match[1], msg.match[2], (url) ->
 
     request.post options, (err, resp, body) ->
       console.log "err: ", err

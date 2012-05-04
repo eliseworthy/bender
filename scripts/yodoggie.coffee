@@ -10,7 +10,7 @@ module.exports = (robot) ->
     options =  
       uri: 'http://memer.herokuapp.com/images' 
       json:
-        picture: meme_value
+        picture: meme_image
 
     request.post options, (err, resp, body) ->
       console.log "err: ", err

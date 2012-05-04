@@ -2,11 +2,20 @@
 #
 # post <image url> - puts an image on hungryacademymemes.com
 
+request = require 'request'
+
 module.exports = (robot) ->
 
   robot.respond /post( (\S+))?/i, (msg) ->
-    post = msg.match[2] 
-    msg.send post
+    meme_value = msg.match[2] 
+    
+    options =  
+      uri: 'http://memer.herokuapp.com/images' 
+      json:
+        picture: meme_value
 
-
-
+    request.post options, (err, resp, body) ->
+      console.log "err: ", err
+      console.log "resp: ", resp
+      console.log "body: ", body
+      msg.send body.picture

@@ -1,1 +1,1 @@
-web: bin/hubot -a campfire -n Bunnybot
+web: bin/hubot -a campfire -n bender

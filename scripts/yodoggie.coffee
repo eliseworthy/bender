@@ -6,19 +6,7 @@ module.exports = (robot) ->
 
   robot.respond /(YO DOGGIE .*) (SO .*)/i, (msg) ->
     meme_image = memeGenerator msg, 79, 108785, msg.match[1], msg.match[2], (url) ->
-  
-      options =  
-        uri: 'http://memer.herokuapp.com/images' 
-        json:
-          picture: meme_image  
-          
-      request.post options, (err, resp, body) ->
-        console.log "err: ", err
-        console.log "resp: ", resp
-        console.log "body: ", body
-        msg.send meme_image
-
-    
+      msg.send meme_image
 
 memeGenerator = (msg, generatorID, imageID, text0, text1, callback) ->
   username = process.env.HUBOT_MEMEGEN_USERNAME

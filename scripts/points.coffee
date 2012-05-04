@@ -5,6 +5,6 @@
 
 module.exports = (robot) ->
 
-  robot.respond /points/i, (msg) ->
-    points = Math.floor(Math.random() * 9001) 
-    msg.send points
+  robot.respond /(points)(.*)/i, (msg) ->
+    points = Math.floor(Math.random() * 901) 
+    msg.reply points

@@ -1,4 +1,4 @@
-# <text> GAHHH! - Generates Angry Jeff
+# angry jeff <text>, <text> - Generates Angry Jeff
 
 request = require 'request'
 

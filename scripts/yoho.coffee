@@ -1,9 +1,9 @@
-# <text> SO SPEAKETH THE YOHO - Generates Yoho
+# <text> so speaketh the yoho - Generates Yoho
 
 request = require 'request'
 
 module.exports = (robot) ->
-  robot.respond /(.*) (SO SPEAKETH THE YOHO.*)/i, (msg) ->
+  robot.respond /(.*) (so speaketh the yoho.*)/i, (msg) ->
     memeGenerator msg, 970994, 4316452, msg.match[1], msg.match[2], (url) ->
       options =  
         uri: 'http://memer.herokuapp.com/images' 

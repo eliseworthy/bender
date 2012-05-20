@@ -1,4 +1,4 @@
-# Yo doggie <text> so <text> - Generates Yo Dawg
+# <text> SO SPEAKETH THE YOHO - Generates Yoho
 
 request = require 'request'
 

@@ -1,4 +1,4 @@
-# Yo doggie <text> so <text> - Generates Yo Dawg
+# <text> GAHHH! - Generates Angry Jeff
 
 request = require 'request'
 
